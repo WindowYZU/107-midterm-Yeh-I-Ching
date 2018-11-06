@@ -103,9 +103,9 @@ public class NewJFrame extends javax.swing.JFrame {
         try {
             jButton1.setEnabled(false);
             //從 combobox 抓出被選到的項目，存到變數裡
-             DefaultListModel model=(DefaultListModel) jList1.getModel();
-             model.addElement(jComboBox1.getSelectedItem());
-             jList1.updateUI();
+            DefaultListModel model=(DefaultListModel) jList1.getModel();
+            model.addElement(jComboBox1.getSelectedItem());
+            jList1.updateUI();
             String selectedItem="";
             /////////////////////////////////////
             URL url = new URL(selectedItem);
@@ -131,6 +131,7 @@ public class NewJFrame extends javax.swing.JFrame {
                                 try {
                                     URL fileURL=tempFile.toURI().toURL();
                                     //利用 fileURL 將 image icon 加到 jLabel2
+                                    jLabel2=URL();
                                     ////////////////////////////////////////
                                     jList1.updateUI();
                                 } catch (Exception ex) {
