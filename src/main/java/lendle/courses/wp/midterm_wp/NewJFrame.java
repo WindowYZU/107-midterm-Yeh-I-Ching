@@ -31,6 +31,8 @@ public class NewJFrame extends javax.swing.JFrame {
      */
     public NewJFrame() {
         initComponents();
+        DefaultListModel model= new DefaultListModel();
+        jList1.setModel(model);
     }
 
     /**
@@ -101,6 +103,9 @@ public class NewJFrame extends javax.swing.JFrame {
         try {
             jButton1.setEnabled(false);
             //從 combobox 抓出被選到的項目，存到變數裡
+             DefaultListModel model=(DefaultListModel) jList1.getModel();
+             model.addElement(jComboBox1.getSelectedItem());
+             jList1.updateUI();
             String selectedItem="";
             /////////////////////////////////////
             URL url = new URL(selectedItem);
